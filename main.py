@@ -12,9 +12,10 @@ def tell_joke(joke_key):
     """
     for line in jokes[joke_key]:
         input(line)  # user presses enter to continue 
-# this shows the use of abstraction, as the jokes are stored in a dictionary and accessed through a function, 
+# this shows the use of abstraction, 
+# as the jokes are stored in a dictionary and accessed through a function
 # allowing for a cleaner and more organized code structure.
-# The tell_joke function abstracts away the details of how the jokes are stored and presented, 
+# The tell_joke function abstracts away the details of how the jokes are stored and presented
 # allowing the main function to focus on the flow of the game rather than the specifics of joke-telling.
 def get_joke_choice():
     """
