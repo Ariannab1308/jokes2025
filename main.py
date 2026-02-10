@@ -16,7 +16,7 @@ def tell_joke(joke_key):
 # allowing the main function to focus on the flow of the game.
 def get_joke_choice():
      while True:
-        choice = input("Choose a joke: robbers, tanks, or pencils: ").lower()
+        choice = input("Choose a joke: robbers, tanks, or pencils: ")
         if choice in jokes:
             return choice
         print("Invalid choice. Try again.")
@@ -26,7 +26,7 @@ def get_joke_choice():
 # then they are prompted to choose a joke, and finally, 
 # they are asked if they want to hear another joke or if they are finished.
 def main():
-    start = input("Do you want to hear a joke? (yes/no): ").lower()
+    start = input("Do you want to hear a joke? (yes/no): ")
 
     if start == "no":
         print("Okay, maybe next time!")
@@ -40,7 +40,7 @@ def main():
         joke_choice = get_joke_choice()
         tell_joke(joke_choice)
 
-        start = input("Do you want to hear another joke or are you finished? ").lower()
+        start = input("Do you want to hear another joke or are you finished? ")
 # After the user finishes hearing jokes, 
 # they are prompted to rate the game 
 # and provide feedback on if they would recommend it to others.
@@ -49,7 +49,7 @@ def main():
         score = rating * 10
         print(str(score) + "% satisfaction rate")
 
-        recommend = input("Would you recommend this game to a friend? ").lower()
+        recommend = input("Would you recommend this game to a friend? ")
         if recommend in ["yes", "maybe"]:
             print("Thanks, we appreciate it!")
         else:
