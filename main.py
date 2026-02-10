@@ -1,4 +1,4 @@
-# ARIANNA BARRERA, CHLOE DOUGHERTY
+# ARIANNA BARRERA, CHLOE DOUGHERTY :)
 jokes = {
     "robbers": ["Knock knock", "Calder", "Calder police — I've been robbed!"],
     "tanks": ["Knock knock", "Tank", "You're welcome!"],
@@ -7,22 +7,15 @@ jokes = {
 # This shows a list abstraction, as the jokes are stored in a dictionary with keys 
 # representing the joke types and values being lists of strings that make up the jokes.
 def tell_joke(joke_key):
-    """
-    Function that tells a joke based on the user's choice.
-    """
     for line in jokes[joke_key]:
         input(line)  # user presses enter to continue 
 # this shows the use of abstraction, 
 # as the jokes are stored in a dictionary and accessed through a function
-# allowing for a cleaner and more organized code structure.
+# for a cleaner and more organized code structure.
 # The tell_joke function abstracts away the details of how the jokes are stored and presented
-# allowing the main function to focus on the flow of the game rather than the specifics of joke-telling.
+# allowing the main function to focus on the flow of the game.
 def get_joke_choice():
-    """
-    Function that gets a valid joke choice from the user.
-    Uses selection to ensure correct input.
-    """
-    while True:
+     while True:
         choice = input("Choose a joke: robbers, tanks, or pencils: ").lower()
         if choice in jokes:
             return choice
@@ -33,10 +26,6 @@ def get_joke_choice():
 # then they are prompted to choose a joke, and finally, 
 # they are asked if they want to hear another joke or if they are finished.
 def main():
-    """
-    Main algorithm: sequencing, selection, iteration.
-    Controls the flow of the entire program.
-    """
     start = input("Do you want to hear a joke? (yes/no): ").lower()
 
     if start == "no":
@@ -53,7 +42,8 @@ def main():
 
         start = input("Do you want to hear another joke or are you finished? ").lower()
 # After the user finishes hearing jokes, 
-# they are prompted to rate the game and provide feedback on if they would recommend it to others.
+# they are prompted to rate the game 
+# and provide feedback on if they would recommend it to others.
     if start == "finished":
         rating = int(input("Please rate our game 1–10: "))
         score = rating * 10
